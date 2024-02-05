@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
+//---set the view engine
+app.set("view engine","ejs");
 
 //Home
 app.get("/",(req, res)=>{
-    res.send('Home page');
+    //use res.render to send file
+    res.render('index');
 });
 
 app.listen(3000,()=>{

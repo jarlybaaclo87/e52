@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome EJS</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate alias. Maiores vitae, sequi consequuntur quidem, 
+    est praesentium rerum voluptatum corrupti neque blanditiis, reprehenderit sed explicabo iste debitis repellat amet tempore velit! Libero,
+     sit repudiandae et quaerat ducimus rerum iure, saepe, dolorem eligendi fugit odit nostrum aperiam cumque optio! Sapiente?</p>
+    <h3>The sum of 3 and 5 is <%= 3 + 5 %></h3>
+    <!--Start of js-->
+    <% console.log("message form the client!")
+    const cartList = ['apple','milk','cereal','candies','cola'];
+    let counter =1;
+    %>
+    <!--end of js-->
+    <h2>Items in cart</h2>
+    <ol>
+        <!--start of js-->
+    <%cartList.forEach((item)=>{ 
+        if(counter!==3){
+        %>
+        <!--execute under if-->
+        <li><%=item %></li>
+        <!--execute under if-->
+    <%}else{%>
+        <!--execute under else-->
+        <li><h3><%=item %></h3></li>
+        <!--execute under else-->
+    <%;}
+    counter++;
+})%>
+</body>
+</html>
